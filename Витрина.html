@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=WAoE14KwnpwTI6qSlTOiImj6RT49rB3dLHgnd-tGrxrrT5vlvqPL7Yr3vhfB2t3lLbRWwD6mAjhm2AVspiTavkOu2GwBYvd_yw3fD65oDNRleoekk9kXOBtZk0WvUsD1l2VOgHQnmd6CSf71hmEk--Ww365EmMuXo-uIjlC3lSQPXr6bnOpGcA3WYTNW0W6ffHFk66EKk26KSrQUykM9ysD67NOs_Sz-9SRKbLCS9D6H1PHZeTsxskV_chZ3UKG4J68pfgHkHSw-j4Q7RIF1b22ZL0D2JYjF34ehNf7mak0BjWJZwVGc12Aa03dryEs0HOyOc87CiBHvodr4yJI2ebDtNwFmD_hKSOuQGukyoqunv1EnBQCpyWgGMIv1O7eRxYAo2-ZQnSrWJPVQyrv3DugghYTXwjlvpd6tVwP5EkqHdebGccwbFR8ZtHdnzytqDFR1ZfdJzcSBqiZ-Nt6ah4D5csH4yZL3iVh4R_VSn7E1-3zPQ9l4gjZh17JOMA7_jbTIWeSUrKh6bHoTWVynBTfsh-G9ctKlq4lS9yJtT-WeuVBz0pEFWPOX3Lp0CgOdvLZCf59t0yz3rWuYvHFEdZv7tGLtEXgJVkGn_TVI2QYrdFLlObG5IQPSvypVrkZOH__uL0wdOiqig4QOegl6MQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9ncmVlbmF0b21jYXNlbGFiLmlzcHJpbmdsZWFybi5ydS9wcm94eS9sZWFybi1jbm9kZS0wL2F0dGFjaG1lbnQvMjU4NTk2LWJ3YTZhLU5FY21zLWtwZ3hNLzI1ODU5Ni81MDE4OC5odG1sLyVEMCU5MiVEMCVCOCVEMSU4MiVEMSU4MCVEMCVCOCVEMCVCRCVEMCVCMC5odG1sP3BrPWV5SjBlWEFpT2lKS1YxUWlMQ0poYkdjaU9pSklVekkxTmlKOS5leUpoZFNJNkltbHpiSEoxTFRJMU9EVTVOaUlzSW5WMUlqb2lZalJrT0daaU9HTXRNMk5qWXkweE1XVmxMV0l6TnpZdFlUWXdabVV5T0Rjek9XRXdJaXdpWTJzaU9pSXlOVGcxT1RZdFluZGhObUV0VGtWamJYTXRhM0JuZUUwaUxDSmphU0k2SW1OaVpESTROV1E0TFRNM1pUWXRNVEZsWkMxaE5qWXhMV0ZsT0RjeVl6RXpaVGc0TUNJc0ltRnRJam94TENKbGRDSTZNVFk1TnpBME5ETTFPSDAuS01OM3J2X3NJOTVwNm9wak9BU0RVdXViQ180ZEktM0JrdnVPWjZITFFMWQ"/><style>
+        :root {
+            color: #222;
+            font-family: Arial;
+        }
+
+        .shop {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .product h2 {
+            margin: 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #basket-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            margin: auto;
+        }
+
+        li {
+            text-decoration: underline;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shop">
+        <div class="product">
+            <h2>Lenovo Yoga</h2>
+            <p>Price: <span class="price">3000</span></p>
+            <button onclick="addToBasket(1)">Buy</button>
+        </div>
+        <div class="product">
+            <h2>Acer Aspire</h2>
+            <p>Price: <span class="price">1800</span></p>
+            <button onclick="addToBasket(2)">Buy</button>
+        </div>
+        <div class="product">
+            <h2>Dell Vostro</h2>
+            <p>Price: <span class="price">3400</span></p>
+            <button onclick="addToBasket(3)">Buy</button>
+        </div>
+    </div>
+    <hr>
+    <div class="basket">
+        <h2 style="text-align: center;">Cart</h2>
+        <ul id="basket-items"></ul>
+        <h3 style="text-align: center;">Total price: <span id="total">0</span></h3>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
